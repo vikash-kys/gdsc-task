@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://media.istockphoto.com/id/1433155192/photo/navy-blue-abstract-watercolor-pattern-background-dark-art-background-for-design.webp?b=1&s=170667a&w=0&k=20&c=t83mV-Z1B1MXwTVZpyzABJK-MzaKVUmrXu55-iARNBk=) center;
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+    width: 80vw;
+    height: 80vh;
+    max-width: 1200px; 
+    max-height: 800px; 
+}
+
+.box {
+    border-radius: 1em;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid #ffffff10;
+    backdrop-filter: blur(50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: rgb(14, 11, 39);
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+.box:hover {
+    transform: scale(1.02);
+    border: 2px solid #ffffff50;
+}
+
+
+.red {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; 
+    
+}
+
+.number {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.eye {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3; 
+}
+
+.center-name {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.works {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    font-family: 'Lucida', cursive;
+}
+
+.failures {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4; 
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 90vw;
+        height: 90vh;
+    }
+    .box {
+        border-radius: 0.5em;
+    }
+}
